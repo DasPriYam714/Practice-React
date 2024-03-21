@@ -17,10 +17,19 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+
+      <Person></Person>
       
       
     </>
   )
+}
+
+// dynamic call
+function Person(){
+  const person ={name: 'Priyam', Age : 24, salary: 20, cost : 18}
+  return <h3>I am {person.name} with age {person.Age}. my salary is {person.salary} and monthly cost is {person.cost}. So monthly save is {person.salary - person.cost}. </h3>
+
 }
 
 export default App
