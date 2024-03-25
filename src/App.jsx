@@ -20,6 +20,7 @@ function App() {
 
       <Person></Person>
       <Developer></Developer>
+      <Student name="Jon" id={24} age={24}></Student>
       
       
     </>
@@ -46,6 +47,29 @@ return (
   </div>
 )
 
+}
+
+
+// add destructuring
+
+function Student({name, id, age}){
+
+  const developerStyle2={
+    margin: '20px',
+    border: '2px solid purple',
+    borderRadius: '5px'
+  }
+
+  return (
+
+  <div style={developerStyle2}>
+    <h3>I am a Student</h3>
+    <p>Name: {name}</p>
+    <p>Id: {id}</p>
+    <p>Age: {age}</p>
+  </div>
+  )
+  
 }
 
 export default App
