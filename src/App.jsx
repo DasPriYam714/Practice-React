@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Task from './Todo'
 
 function App() {
   
@@ -21,6 +22,9 @@ function App() {
       <Person></Person>
       <Developer></Developer>
       <Student name="Jon" id={24} age={24}></Student>
+      <Student name="Don"  age={24}></Student>
+      <Task task={"do the work"} isDone={false}></Task>
+      <Task task={"Thanks for doing the work"} isDone={true}></Task>
       
       
     </>
@@ -51,8 +55,9 @@ return (
 
 
 // add destructuring
+// here we can use default values so here we use id=0 as a default value
 
-function Student({name, id, age}){
+function Student({name, id=1, age}){ 
 
   const developerStyle2={
     margin: '20px',
