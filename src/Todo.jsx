@@ -22,8 +22,32 @@
 
 // Conditional Rendering: using && operators
 
+// export default function Task({task, isDone}){
+//     return (
+//     <li>  {task} {isDone &&  ' : Finished'} </li>)
+
+// }
+
+
+
+// Conditional Rendering: using || operators
+
+// export default function Task({task, isDone}){
+//     return (
+//     <li>  {task} {isDone ||  ' : Work on.'} </li>)
+
+// }
+
+// conditional rendering: using variables
 export default function Task({task, isDone}){
-    return (
-    <li>  {task} {isDone &&  ' : Finished'} </li>)
+    let listItem;
+    if(isDone===true){
+        listItem= <li> Finished: {task}</li>
+    }
+    else{
+    listItem= <li> Work On: {task}</li>
+    }
+
+    return listItem;
 
 }
