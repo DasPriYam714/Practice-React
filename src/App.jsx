@@ -3,8 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Task from './Todo'
+import Actor from './Actor'
+import Singer from './Singer'
 
 function App() {
+
+  const cricketers =['Tamim', 'Sakib', 'Litton', 'Riad']
+
+  const singers= [
+    {id:1, name:'Atif', age: 30},
+    {id:2, name:'Arijit', age: 40},
+    {id:3, name:'Ripon', age:45}
+
+  ]
   
 
   return (
@@ -25,6 +36,16 @@ function App() {
       <Student name="Don"  age={24}></Student>
       <Task task={"do the work"} isDone={false}></Task>
       <Task task={"Thanks for doing the work"} isDone={true}></Task>
+
+      <Actor name="Bappa Raj"></Actor>
+
+      {
+        cricketers.map(cricketers=> <Actor name={cricketers}></Actor>)
+      }
+
+      {
+        singers.map(singer=> <Singer singer={singer}></Singer>)
+      }
       
       
     </>
@@ -55,7 +76,7 @@ return (
 
 
 // add destructuring
-// here we can use default values so here we use id=0 as a default value
+// here we can use default values so here we use id=1 as a default value
 
 function Student({name, id=1, age}){ 
 
