@@ -5,6 +5,7 @@ import './App.css'
 import Task from './Todo'
 import Actor from './Actor'
 import Singer from './Singer'
+import BookStore from './BookStore'
 
 function App() {
 
@@ -14,6 +15,14 @@ function App() {
     {id:1, name:'Atif', age: 30},
     {id:2, name:'Arijit', age: 40},
     {id:3, name:'Ripon', age:45}
+
+  ]
+
+  const books=[
+    {id:1, name:'Math', price:200},
+    {id:2, name:'English', price:250},
+    {id:3, name:'Bangla', price:300},
+    {id:4, name:'Social Science', price:350},
 
   ]
   
@@ -29,6 +38,10 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+
+      <BookStore book={books}> </BookStore>
+
+
 
       <Person></Person>
       <Developer></Developer>

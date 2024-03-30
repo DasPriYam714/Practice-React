@@ -1,0 +1,10 @@
+.devStyles {
+    margin: 20px;
+    border: 2px solid red ;
+    border-radius: 5px
+  }
+
+  .border {
+    border: 3px solid purple;
+    border-radius: 10px;
+  }
