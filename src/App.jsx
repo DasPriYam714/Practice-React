@@ -6,6 +6,7 @@ import Task from './Todo'
 import Actor from './Actor'
 import Singer from './Singer'
 import BookStore from './BookStore'
+import Counter from './Counter'
 
 function App() {
 
@@ -49,6 +50,8 @@ function App() {
       <h1>Vite + React</h1>
 
       <BookStore book={books}> </BookStore>
+
+      <Counter></Counter>
 
 
 
