@@ -25,6 +25,15 @@ function App() {
     {id:4, name:'Social Science', price:350},
 
   ]
+
+  function handleClick(){
+    alert("click me!!")
+  }
+
+  // with parameters
+  function eventClick(num){
+    alert(`param ${num} and sum ${num +5}`)
+  }
   
 
   return (
@@ -59,6 +68,17 @@ function App() {
       {
         singers.map(singer=> <Singer singer={singer}></Singer>)
       }
+
+      {/* event handler type 1 */}
+
+      <button onClick={handleClick}>Click</button>
+
+      {/* event handler type 2 with anonymus arrow function*/}
+
+      <button onClick={() => {alert ('why you click this button??')}}> Click Me</button>
+
+      {/* event handler type 3 with parameters why we need to use arrow function. */}
+      <button onClick={() => eventClick(6)}>Magic Button</button>
       
       
     </>
