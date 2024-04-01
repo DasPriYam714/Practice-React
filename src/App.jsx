@@ -7,6 +7,9 @@ import Actor from './Actor'
 import Singer from './Singer'
 import BookStore from './BookStore'
 import Counter from './Counter'
+import Team from './Team'
+import Users from './Users'
+import Friends from './Friends'
 
 function App() {
 
@@ -82,7 +85,12 @@ function App() {
 
       {/* event handler type 3 with parameters why we need to use arrow function. */}
       <button onClick={() => eventClick(6)}>Magic Button</button>
+
+      <Team></Team>
+
+      <Users></Users>
       
+      <Friends></Friends>
       
     </>
   )
