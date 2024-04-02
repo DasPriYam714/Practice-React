@@ -10,6 +10,7 @@ import Counter from './Counter'
 import Team from './Team'
 import Users from './Users'
 import Friends from './Friends'
+import Countries from './Components/Countries/Countries'
 
 function App() {
 
@@ -91,6 +92,8 @@ function App() {
       <Users></Users>
       
       <Friends></Friends>
+
+      <Countries></Countries>
       
     </>
   )

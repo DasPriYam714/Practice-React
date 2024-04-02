@@ -3,12 +3,12 @@ import Friend from "./Friend"
 
 export default function Friends(){
 
-    const [friends, useFriends] = useState([])
+    const [friends, setFriends] = useState([])
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
-        .then(data => useFriends(data))
+        .then(data => setFriends(data))
     },[])
     return(
         <div style={{border: '5px solid blue', borderRadius: '10px'}}>
