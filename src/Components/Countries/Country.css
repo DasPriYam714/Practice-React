@@ -1,6 +1,11 @@
 .countryBorder{
     border: 5px solid red;
     border-radius: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.btn{
+    border: 2px solid gray;
+    background-color: antiquewhite;
 }
