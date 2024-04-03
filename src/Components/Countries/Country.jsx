@@ -26,7 +26,7 @@ const Country = ({countryInfo, handleVisitedInfo}) => {
     console.log(countryInfo);
 
     return (
-        <div className='countryBorder'>
+    <div className={`countryBorder ${visited && 'background-container'}`}>
             <h2>Name: {name.common}</h2>
             <img src={flags.png} alt="" />
             <p>Capital: {capital}</p>

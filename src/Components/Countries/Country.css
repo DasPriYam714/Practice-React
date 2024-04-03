@@ -9,3 +9,8 @@
     border: 2px solid gray;
     background-color: antiquewhite;
 }
+
+.background-container{
+    background-color: aquamarine;
+    color: black;
+}
