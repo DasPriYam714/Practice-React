@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import './Country.css';
 
-const Country = ({countryInfo}) => {
+const Country = ({countryInfo, handleVisitedInfo}) => {
     const [visited,setVisited]= useState(false)
 
+
+    console.log(handleVisitedInfo);
     // For single Click events
 
     // const handleClick = () => {
     //     setVisited(true);
     // }
+
 
 
 
