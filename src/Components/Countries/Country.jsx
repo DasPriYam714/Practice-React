@@ -5,7 +5,16 @@ const Country = ({countryInfo, handleVisitedInfo}) => {
     const [visited,setVisited]= useState(false)
 
 
-    console.log(handleVisitedInfo);
+    
+
+    const passWithParams = () => {
+        setVisited(!visited);
+        handleVisitedInfo(countryInfo);
+    }
+
+
+
+
     // For single Click events
 
     // const handleClick = () => {
@@ -17,8 +26,9 @@ const Country = ({countryInfo, handleVisitedInfo}) => {
 
 // for double click events
     const handleClick = () => {
-        setVisited(!visited);
+        
     }
+
 
 
     // console.log(countryInfo)
@@ -44,7 +54,7 @@ const Country = ({countryInfo, handleVisitedInfo}) => {
             {/* <button className='btn' onClick={handleClick}>Visited</button>
             {visited ? 'I visited this country' : 'I need to visit this country'} */}
 
-<button className='btn' onClick={handleClick}>{visited ? 'Visited': 'Going'}</button>
+<button className='btn' onClick={passWithParams}>{visited ? 'Visited': 'Going'}</button>
             {visited ? 'I visited this country' : 'I need to visit this country'}
             
         </div>

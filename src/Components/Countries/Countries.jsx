@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Country from "./Country";
 import './Countries.css';
+import { list } from "postcss";
 
 const Countries = () => {
 
@@ -13,13 +14,23 @@ const Countries = () => {
     }, [])
 
     const handleVisitedInfo = country =>{
-        console.log(country);
+        
         console.log('I visited this country')
+
+        const newVisitedCountries = [...visitedInfo, country];
+        setVisitedInfo(newVisitedCountries);
     }
     return (
         <div className="item">
 
             <h3>Countries: {country.length}</h3>
+
+            <h3>Visited Country: {visitedInfo.length}</h3>
+            <ul>
+                {
+                    visitedInfo.map(country=> <li key= {country.cca3}>{country.name.common} </li>)
+                }
+            </ul>
 
             <div className="country-container">
             {
