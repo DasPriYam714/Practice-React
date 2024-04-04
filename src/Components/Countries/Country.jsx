@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Country.css';
 
-const Country = ({countryInfo, handleVisitedInfo}) => {
+const Country = ({countryInfo, handleVisitedInfo,handleVisitedFlags}) => {
     const [visited,setVisited]= useState(false)
 
 
@@ -10,6 +10,7 @@ const Country = ({countryInfo, handleVisitedInfo}) => {
     const passWithParams = () => {
         setVisited(!visited);
         handleVisitedInfo(countryInfo);
+        handleVisitedFlags(countryInfo);
     }
 
 
